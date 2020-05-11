@@ -16,22 +16,17 @@ Basic Recommender System: The basic recommender system includes three components
 
 --Data Splitting:   - spark-submit    Data_Splitting.py     path_to_data_file
 
-This program clean, preprocess and split the original data into training, validation, and testing data 
-with the percentage of 60%,20%,20% accordingly. 
+This program clean, preprocess and split the original data into training, validation, and testing data with the percentage of 60%,20%,20% accordingly. 
 
       --Training and Tuning Model:   - spark-submit    Final_Project_Train.py	path_to_train_data     
          path_to_validation_data	     path_to_test_data      path_to_save_model      tuning option
      
-        This program takes the input of the training data, validation data, and testing data, preprocess the 
-        data to determine the necessary user row for creating the model. The default parameter ‘tuning’ is 
-        set to off to test through the entire pipeline that creates an index, transform, then fit the ALS model 
-        with training data. Set tuning=true to activate hyper-parameter tuning.     
+This program takes the input of the training data, validation data, and testing data, preprocess the data to determine the necessary user row for creating the model. The default parameter ‘tuning’ is set to off to test through the entire pipeline that creates an index, transform, then fit the ALS model with training data. Set tuning=true to activate hyper-parameter tuning.     
      
      --Testing Model:   - spark-submit    Final_Project_Test.py     path_to_test_data      
        path_to_model_indexer      path_to_als_model
      
-     This program takes the input of the test data, loads a model indexer(string), a fitted ALS model, and 
-     evaluate the performance of the model against test data. 
+This program takes the input of the test data, loads a model indexer(string), a fitted ALS model, and evaluate the performance of the model against test data. 
 
 Extension: Fast Search: This extension requires the use of packages annoy, which is available through pip install annoy 
 
