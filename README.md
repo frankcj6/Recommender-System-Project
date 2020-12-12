@@ -1,5 +1,5 @@
 # Recommender-System-Project
-
+![Project_Image](#https://miro.medium.com/max/688/0*KDvwLobKz7HWL01Z.png)
 We built a recommender system in this project, we will be using the Goodreads dataset collect in late 2017 from goodreads.com by Mengting Wan and Julian McAuley. This metadata contains information about ‘876,145 users; 228,648,342 user-book interactions in users' shelves (include 112,131,203 reads and 104,551,549 ratings)’. We use the Alternative Least Square method in Spark to use collaborative filtering to learn latent factor representations for users and items. We also incorporate hyperparameter tuning in model training as well. For the fast search extension feature, we apply the annoy library (which are currently used for spotify recommendation system). The recommender system is built on the Dumbo cluster on NYU HPC. 
 
 Further details and evaluation are stored in the pdf file. 
